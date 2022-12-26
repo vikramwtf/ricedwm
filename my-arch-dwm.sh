@@ -1,9 +1,5 @@
 #!/bin/bash
 echo "Arch Dwm Rice"
-grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
-sed -i 's/quiet/pci=noaer/g' /etc/default/grub
-sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/g' /etc/default/grub
-grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S --noconfirm xorg-server xorg-xinit xorg-xkill xorg-xsetroot xorg-xbacklight xorg-xprop \
      noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
      sxiv mpv zathura zathura-pdf-mupdf ffmpeg imagemagick  \
